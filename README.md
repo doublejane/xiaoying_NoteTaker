@@ -22,4 +22,5 @@ A chrome plugin that is designed for "xiaoying" users. Basic function so far is 
 **Open the downloaded file "XY_results" with notepad or gedit etc, and import them into Excel or LibreOffice by copy-and-paste or relevant buttons therein.
 
 **The format of "XY_results" is: (all separated by Tab)
-<item.title> <interest.return.way> <insurance.num> <amount.invested> <item.duration> <startdate> <interest.rate> <enddate> <first.month.income> <second.month.income> <last.month.income>
+
+item.title || interest.return.way || insurance.num || amount.invested || item.duration || startdate || interest.rate || enddate || first.month.income || second.month.income || last.month.income
