@@ -1,0 +1,31 @@
+{
+   "background": {
+      "page": "background.html"
+   },
+   "browser_action": {
+      "default_icon": "df.png",
+      "default_title": "XYnoteTaker",
+      "default_popup": "popup.html"
+   },
+ "web_accessible_resources": ["temp.js","grab.js","findurl.js"] ,
+ "permissions":["tabs","<all_urls>"],
+"externally_connectable": {
+   "matches": ["*://*.xiaoying.com/*"]
+},
+  "content_security_policy": "default-src 'self'; script-src 'self' https://www.xiaoying.com 'unsafe-eval'; style-src * 'unsafe-inline';",
+   "description": "Single click to record your invested XY items by 2 minutes, and get a text file for Excel import. Chrome version recommended: 48.0.2564.109 (64-bit). Fork me at Github or IRC:doublejane",
+   "icons": {
+      "128": "df.png",
+      "16": "df.png",
+      "48": "df.png"
+   },
+"content_scripts": [{  
+        "matches": ["https://www.xiaoying.com/*"],  
+        "js": ["/static/js/jquery.js","checklogin.js"]  
+    }], 
+   "key": "IMIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnXJyZwV7808g4kqgG50kpnFezTLWG3m6cfq7EaRIF50EWFpn0viMPhBD5h3qHWxKt4wRyKf8iWdjnZ6zJsDRgXnG3nD0ZSuN4HmFB7rzBSqPW4EaWIEolXYtSKKCuTaf2Q/ClbpLB31mZx/nXdIfAArxZAUaXnx5YXL7YKMNWiXbNwxd7RukEo3KPGAZCvzdliCOj9lkgocG4mnJ8fDtpX5bwnRqVb846DWzr03JG8rIQxQgkKbg3orDCCuww6kvrbrOT/k0RZ4ohMDW7wR3vmCrRhQ6W1JnxFNxZxIPzF+QjCMtSIH0pPHTeCckcz5o8iBCi2ocV+8U6CYp7LV5lQIDAQAB",
+   "manifest_version": 2,
+   "name": "XYnoteTaker",
+   "permissions": [ "tabs", "activeTab", "storage", "\u003Call_urls>" ],
+   "version": "1.0"
+}
